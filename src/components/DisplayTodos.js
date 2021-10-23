@@ -7,7 +7,7 @@ import {
   updateTodos,
 } from "../redux/reducer";
 import TodoItem from "./TodoItem";
-import { AnimatePresence, motion } from "framer-motion";
+import { Button } from 'react-bootstrap';
 
 const mapStateToProps = (state) => {
   return {
@@ -27,35 +27,37 @@ const mapDispatchToProps = (dispatch) => {
 const DisplayTodos = (props) => {
   const [sort, setSort] = useState("active");
   return (
+    <>
     <div className="displaytodos">
       <div className="buttons">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        <Button
+         
           onClick={() => setSort("active")}
           className="btn"
         >
           Active
-        </motion.button>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        </Button>
+        <Button
+        
           onClick={() => setSort("completed")}
           className="btn"
         >
           Completed
-        </motion.button>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        </Button>
+        <Button
+       
+         
           onClick={() => setSort("all")}
           className="btn"
         >
           All
-        </motion.button>
+        </Button>
       </div>
+      
+    </div>
+    <div>
       <ul>
-        <AnimatePresence>
+        <li>
           {props.todos.length > 0 && sort === "active"
             ? props.todos.map((item) => {
                 return (
@@ -101,9 +103,10 @@ const DisplayTodos = (props) => {
                 );
               })
             : null}
-        </AnimatePresence>
+        </li>
       </ul>
-    </div>
+      </div>
+    </>
   );
 };
 

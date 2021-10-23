@@ -9,7 +9,6 @@ import { Navbar, Container } from "react-bootstrap";
 function Home(props) {
   return (
     <>
- 
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
@@ -21,13 +20,16 @@ function Home(props) {
               className="d-inline-block align-top logo"
             />
           </Navbar.Brand>
+          <Container>
+      <Navbar.Brand>Welcome to MAKE-FUN-----------------------------captainTOKIO</Navbar.Brand>
+    </Container>
           <LoginButton />
           <LogoutButton />
         </Container>
       </Navbar>
-      <div>
+     
         <Profile />
-      </div>
+      
     </>
   );
 }
