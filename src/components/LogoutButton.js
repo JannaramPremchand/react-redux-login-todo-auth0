@@ -1,6 +1,6 @@
-import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
-import { Nav , Button } from 'react-bootstrap'
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from "react-bootstrap";
 
 const LogoutButton = () => {
   const { logout, isAuthenticated } = useAuth0();
@@ -8,20 +8,10 @@ const LogoutButton = () => {
   return (
     isAuthenticated && (
       <>
-     <Nav justify variant="tabs" className="justify-content-end" >
-  <Nav.Item>
-  <Button onClick={() => logout()}>
-        Log Out
-      </Button>
-  
-  </Nav.Item>
-  
-</Nav>
-
-
+       <Button onClick={() => logout()}>Log Out</Button>
       </>
     )
-  )
-}
+  );
+};
 
-export default LogoutButton
+export default LogoutButton;

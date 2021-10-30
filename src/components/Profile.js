@@ -12,10 +12,9 @@ const Profile = () => {
     isAuthenticated && ( 
     
       <div>
-        
-  <Todoapp person={user.nickname}/>
+     <Todoapp person={user.nickname}/>
       </div>
-    )
+    ) 
   )
 }
 

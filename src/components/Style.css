@@ -13,18 +13,18 @@ html {
 #root{
   width: 100vw;
   height: 100vh;
-  background-color: #FF0;
+  background-color: white;
 }
-#root:hover {
+/* #root:hover {
   background-color: #7b33a5;
   -webkit-transition: background-color 1000ms linear;
   -ms-transition: background-color 1000ms linear;
   transition: background-color 1000ms linear;
-}
+} */
 
 .logo{
-  width: 7rem;
-  height: 5rem;
+  width: 5rem;
+  height: 3rem;
 }
 .App {
   margin-top: 3rem;
