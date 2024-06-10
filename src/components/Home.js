@@ -10,7 +10,7 @@ import { Navbar, Container } from "react-bootstrap";
 function Home(props) {
   return (
     <>
-      <Navbar bg="light" variant="light">
+      <Navbar style={{ backgroundColor: "#22dad8" }}>
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -21,16 +21,12 @@ function Home(props) {
               className="d-inline-block align-top logo"
             />
           </Navbar.Brand>
-          <Container>
-      <Navbar.Brand>Welcome to MAKE-FUN-----------------------------captainTOKIO</Navbar.Brand>
-    </Container>
           <LoginButton />
           <LogoutButton />
         </Container>
       </Navbar>
      <HomePage/>
         <Profile />
-      
     </>
   );
 }

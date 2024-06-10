@@ -15,7 +15,6 @@ const TodoItem = (props) => {
 
   const update = (id, value, e) => {
     if (e.which === 13) {
-      //here 13 is key code for enter key
       updateTodo({ id, item: value });
       inputRef.current.disabled = true;
     }
@@ -23,7 +22,7 @@ const TodoItem = (props) => {
   return (
     <>
   
-    <li key={item.id} className="card my-2 container ">
+    <div key={item.id} className="card my-2 container ">
       <input type='text' className="listinput" ref={inputRef} disabled={inputRef} defaultValue={item.item}
         onKeyPress={(e) => update(item.id, inputRef.current.value, e)}
         />
@@ -52,7 +51,7 @@ const TodoItem = (props) => {
       </div>
       {item.completed && <span className="completed">done</span>}
      
-    </li>
+    </div>
 
     </>
   );

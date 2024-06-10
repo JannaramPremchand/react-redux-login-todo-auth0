@@ -35,15 +35,20 @@ const Todos = (props) => {
       setTodo("");
     }
   };
-  //console.log("props from store", props);
   return (
     <div className="addTodos">
-      <input
-        type="text"
-        onChange={(e) => handleChange(e)}
-        className="todo-input"
-        value={todo}
-      />
+      <div className="group">
+        <input
+          required=""
+          className="input todo-input"
+          type="text"
+          onChange={(e) => handleChange(e)}
+          value={todo}
+        />
+        <span className="highlight"></span>
+        <span className="bar"></span>
+        <label>Add Your Todo Here</label>
+      </div>
 
       <Button
         whileHover={{ scale: 1.1 }}

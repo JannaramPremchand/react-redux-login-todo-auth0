@@ -16,8 +16,11 @@ function Todoapp(props) {
       </Navbar>
       <div className="App  justify-content-center">
         <h1> Todo App </h1>
+        <div className="d-flex justify-content-between align-items-center ">
         <Todos />
         <DisplayTodos />
+        </div>
+        
       </div>
     </div>
   );

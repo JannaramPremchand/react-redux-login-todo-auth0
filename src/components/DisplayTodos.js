@@ -28,6 +28,7 @@ const DisplayTodos = (props) => {
   const [sort, setSort] = useState("active");
   return (
     <>
+    <div style={{width:"70%"}}>
     <div className="displaytodos">
       <div className="buttons">
         <Button
@@ -55,7 +56,7 @@ const DisplayTodos = (props) => {
       </div>
       
     </div>
-    <div>
+    <div style={{width:"100%"}}>
       <ul>
         <li>
           {props.todos.length > 0 && sort === "active"
@@ -105,6 +106,7 @@ const DisplayTodos = (props) => {
             : null}
         </li>
       </ul>
+      </div>
       </div>
     </>
   );
